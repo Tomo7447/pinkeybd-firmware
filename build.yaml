@@ -1,5 +1,2 @@
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@v0.3
+board: ["xiao_ble//zmk"]
+shield: [pinkeybd_left, pinkeybd_right, settings_reset]
