@@ -14,6 +14,42 @@
             #sensor-binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
+        minus_single: minus_single {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_SINGLE";
+            bindings = <&kp MINUS>, <&kp LS(N7)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        slash_double: slash_double {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_DOUBLE";
+            bindings = <&kp SLASH>, <&kp AT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        period_exclamation: period_exclamation {
+            compatible = "zmk,behavior-mod-morph";
+            label = "PERIOD_EXCLAMATION";
+            bindings = <&kp PERIOD>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        comma_question: comma_question {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COMMA_QUESTION";
+            bindings = <&kp COMMA>, <&kp QUESTION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     combos {
@@ -74,10 +110,10 @@
 
         default_layer {
             bindings = <
-&kp Q                          &kp W            &kp E        &kp R           &kp T                &mt LG(PERIOD) F7  &kp Y        &kp U      &kp I             &kp O   &kp P
-&kp A                          &kp S            &kp D        &kp F           &kp G                &none              &kp H        &kp J      &kp K             &kp L   &trans
-&kp Z                          &kp X            &kp C        &kp V           &kp B                &mt LS(LG(S)) F10  &kp N        &kp M      &trans            &trans  &trans
-&mt LEFT_CONTROL K_CALCULATOR  &lt 1 BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT  &mt LG(H) LC(SPACE)  &mkp LCLK          &lt 1 ENTER  &mkp RCLK  &mt LEFT_ALT DEL
+&kp Q                          &kp W            &kp E        &kp R           &kp T                &mt LG(PERIOD) F7  &kp Y        &kp U      &kp I             &kp O                &kp P
+&kp A                          &kp S            &kp D        &kp F           &kp G                &none              &kp H        &kp J      &kp K             &kp L                &minus_single
+&kp Z                          &kp X            &kp C        &kp V           &kp B                &mt LS(LG(S)) F10  &kp N        &kp M      &comma_question   &period_exclamation  &slash_double
+&mt LEFT_CONTROL K_CALCULATOR  &lt 3 BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT  &mt LG(H) LC(SPACE)  &mkp LCLK          &lt 1 ENTER  &mkp RCLK  &mt LEFT_ALT DEL
             >;
 
             sensor-bindings = <&rot_kp PG_DN PG_UP>;
@@ -92,10 +128,10 @@
 
         symbol_layer {
             bindings = <
-&mo 5              &kp LEFT_BRACKET   &kp LS(NUMBER_6)         &kp SINGLE_QUOTE  &none      &none   &kp LPAR  &kp RPAR   &kp UP     &kp LBKT   &kp RBKT
-&kp C_VOLUME_UP    &kp HASH           &kp PERCENT              &kp SEMI          &none      &none   &kp BSPC  &kp LEFT   &kp DOWN   &kp RIGHT  &kp DEL
-&kp C_VOLUME_DOWN  &kp DOUBLE_QUOTES  &kp LS(INTERNATIONAL_1)  &kp MINUS         &none      &none   &kp APOS  &kp EQUAL  &kp BSLH   &kp GRAVE  &kp INS
-&kp C_MUTE         &trans             &trans                   &trans            &kp PSCRN  &trans  &trans    &trans     &kp RCTRL
+&mo 5              &kp LEFT_BRACKET   &kp LS(NUMBER_6)         &kp SINGLE_QUOTE  &none  &none   &none   &none   &none  &none  &none
+&kp C_VOLUME_UP    &kp HASH           &kp PERCENT              &kp SEMI          &none  &none   &none   &none   &none  &none  &none
+&kp C_VOLUME_DOWN  &kp DOUBLE_QUOTES  &kp LS(INTERNATIONAL_1)  &kp MINUS         &none  &none   &none   &none   &none  &none  &none
+&kp C_MUTE         &trans             &trans                   &trans            &none  &trans  &trans  &trans  &none
             >;
         };
 
@@ -124,10 +160,10 @@
 
         Arrow_layer {
             bindings = <
-&kp N1      &kp N2      &kp N3      &kp N4      &kp N5          &kp ESC        &none         &none        &none  &none  &kp HOME
-&kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)      &none          &kp UP_ARROW  &none        &none  &none  &kp END
-&kp F1      &kp F2      &kp F3      &kp F4      &kp F5          &kp TAB        &kp DOWN      &kp RIGHT    &none  &none  &none
-&mo LSHIFT  &trans      &trans      &trans      &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
+&none  &none   &none   &none   &none           &none          &none         &none        &none  &none  &kp HOME
+&none  &none   &none   &none   &none           &none          &kp UP_ARROW  &none        &none  &none  &kp END
+&none  &none   &none   &none   &none           &none          &kp DOWN      &kp RIGHT    &none  &none  &none
+&none  &trans  &trans  &trans  &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
