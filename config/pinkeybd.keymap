@@ -5,214 +5,218 @@
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
-&lt { tapping-term-ms = <140>; };
+};
 
 / {
-    behaviors {
-        rot_kp: sensor_rotate_kp {
-            compatible = "zmk,behavior-sensor-rotate-var";
-            #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
 
-        minus_single: minus_single {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MINUS_SINGLE";
-            bindings = <&kp MINUS>, <&kp LS(N7)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        slash_double: slash_double {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_DOUBLE";
-            bindings = <&kp SLASH>, <&kp AT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        period_exclamation: period_exclamation {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PERIOD_EXCLAMATION";
-            bindings = <&kp PERIOD>, <&kp EXCLAMATION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        comma_question: comma_question {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COMMA_QUESTION";
-            bindings = <&kp COMMA>, <&kp QUESTION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
+behaviors {
+    rot_kp: sensor_rotate_kp {
+        compatible = "zmk,behavior-sensor-rotate-var";
+        #sensor-binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
     };
 
-    combos {
-        compatible = "zmk,combos";
+    minus_single: minus_single {
+        compatible = "zmk,behavior-mod-morph";
+        label = "MINUS_SINGLE";
+        bindings = <&kp MINUS>, <&kp LS(N7)>;
 
-        left_kakko {
-            bindings = <&kp LS(N8)>;
-            key-positions = <2 3>;
-            layers = <0 2 1>;
-        };
-
-        right_kakko {
-            bindings = <&kp LS(N9)>;
-            key-positions = <3 4>;
-            layers = <0 1 2>;
-        };
-
-        Left_kagi {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <13 14>;
-            layers = <0 1 2>;
-        };
-
-        Right_kagi {
-            bindings = <&kp NUHS>;
-            key-positions = <15 14>;
-            layers = <0 2 1>;
-        };
-
-        Syounari {
-            bindings = <&kp LS(COMMA)>;
-            key-positions = <24 25>;
-            layers = <0 2 1>;
-        };
-
-        Dainari {
-            bindings = <&kp LS(DOT)>;
-            key-positions = <25 26>;
-            layers = <0 1 2>;
-        };
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <4 15>;
-            layers = <0 2 1>;
-        };
-
-        Left_boot_reset {
-            bindings = <&bootloader>;
-            key-positions = <33 27 36>;
-            layers = <0>;
-        };
-
-        Right_boot_reset {
-            bindings = <&bootloader>;
-            key-positions = <41 38 37>;
-            layers = <0>;
-        };
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
     };
 
-    keymap {
-        compatible = "zmk,keymap";
+    slash_double: slash_double {
+        compatible = "zmk,behavior-mod-morph";
+        label = "SLASH_DOUBLE";
+        bindings = <&kp SLASH>, <&kp AT>;
 
-        // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |        /       |       ,       |       .       |      -        |      ;       |    ESC         |                   |           |       L      |       R       |       D       |       Y       |      P      |
-        // |        A       |       O       |       E       |      I        |      U       |    SCROLLLOCK  |                   |           |       G      |       N       |       T       |       S       |      K      |
-        // |        X       |       C       |       V       |      W        |      Q       |    TAB         |                   |     F     |       J      |       H       |       M       |       B       |      Z      |
-        // |    L_SHIFT     |               |               |   LOWER / Jp  |    Space     |    LEFT_WIN    |                   |  R_SHIFT  |      ENTER   |  LOWER2 / Ja  |               |               |   FUN_L     |
-        // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
+    };
 
-        default_layer {
-            bindings = <
+    period_exclamation: period_exclamation {
+        compatible = "zmk,behavior-mod-morph";
+        label = "PERIOD_EXCLAMATION";
+        bindings = <&kp PERIOD>, <&kp EXCLAMATION>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
+    };
+
+    comma_question: comma_question {
+        compatible = "zmk,behavior-mod-morph";
+        label = "COMMA_QUESTION";
+        bindings = <&kp COMMA>, <&kp QUESTION>;
+
+        #binding-cells = <0>;
+        mods = <(MOD_LSFT)>;
+    };
+};
+
+combos {
+    compatible = "zmk,combos";
+
+    left_kakko {
+        bindings = <&kp LS(N8)>;
+        key-positions = <2 3>;
+        layers = <0 2 1>;
+    };
+
+    right_kakko {
+        bindings = <&kp LS(N9)>;
+        key-positions = <3 4>;
+        layers = <0 1 2>;
+    };
+
+    Left_kagi {
+        bindings = <&kp RIGHT_BRACKET>;
+        key-positions = <13 14>;
+        layers = <0 1 2>;
+    };
+
+    Right_kagi {
+        bindings = <&kp NUHS>;
+        key-positions = <15 14>;
+        layers = <0 2 1>;
+    };
+
+    Syounari {
+        bindings = <&kp LS(COMMA)>;
+        key-positions = <24 25>;
+        layers = <0 2 1>;
+    };
+
+    Dainari {
+        bindings = <&kp LS(DOT)>;
+        key-positions = <25 26>;
+        layers = <0 1 2>;
+    };
+
+    tab {
+        bindings = <&kp TAB>;
+        key-positions = <4 15>;
+        layers = <0 2 1>;
+    };
+
+    Left_boot_reset {
+        bindings = <&bootloader>;
+        key-positions = <33 27 36>;
+        layers = <0>;
+    };
+
+    Right_boot_reset {
+        bindings = <&bootloader>;
+        key-positions = <41 38 37>;
+        layers = <0>;
+    };
+};
+
+keymap {
+    compatible = "zmk,keymap";
+
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // |        /       |       ,       |       .       |      -        |      ;       |    ESC         |                   |           |       L      |       R       |       D       |       Y       |      P      |
+    // |        A       |       O       |       E       |      I        |      U       |    SCROLLLOCK  |                   |           |       G      |       N       |       T       |       S       |      K      |
+    // |        X       |       C       |       V       |      W        |      Q       |    TAB         |                   |     F     |       J      |       H       |       M       |       B       |      Z      |
+    // |    L_SHIFT     |               |               |   LOWER / Jp  |    Space     |    LEFT_WIN    |                   |  R_SHIFT  |      ENTER   |  LOWER2 / Ja  |               |               |   FUN_L     |
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    default_layer {
+        bindings = <
 &kp Q                          &kp W            &kp E        &kp R           &kp T                &mt LG(PERIOD) F7  &kp Y        &kp U      &kp I             &kp O                &kp P
 &kp A                          &kp S            &kp D        &kp F           &kp G                &none              &kp H        &kp J      &kp K             &kp L                &minus_single
 &kp Z                          &kp X            &kp C        &kp V           &kp B                &mt LS(LG(S)) F10  &kp N        &kp M      &comma_question   &period_exclamation  &slash_double
 &mt LEFT_CONTROL K_CALCULATOR  &lt 3 BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT  &mt LG(H) LC(SPACE)  &mkp LCLK          &lt 1 ENTER  &mkp RCLK  &mt LEFT_ALT DEL
-            >;
+        >;
 
-            sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
-        };
+        sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
+    };
 
-        // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |    /           |       ,       |       END     |     （        |      ”        |    PAUSE_BREAK|                  |            |      （       |       ）     |        ↑      |        [      |      ]      |
-        // |    HOME        |       C_SAVE  |       END     |       ）      |       U       |    SCROLLLOCK |                  |            |   Backspace   |       ←      |        ↓      |        →      |     DEL     |
-        // |    UNDO        |       CUT     |       COPY    |       PASTE   |       Q       |    TAB        |                  |   PSCRN    |    ' / "      |    = / +     |    \ / |      |    ` / ~      |    INS      |
-        // |    L_SHIFT     |               |               |       none    |    SPACE      |    LALT       |                  |   RSHIFT   |   ENTER       |       FUN_L  |               |               |    RCTRL    |
-        // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // |    /           |       ,       |       END     |     （        |      ”        |    PAUSE_BREAK|                  |            |      （       |       ）     |        ↑      |        [      |      ]      |
+    // |    HOME        |       C_SAVE  |       END     |       ）      |       U       |    SCROLLLOCK |                  |            |   Backspace   |       ←      |        ↓      |        →      |     DEL     |
+    // |    UNDO        |       CUT     |       COPY    |       PASTE   |       Q       |    TAB        |                  |   PSCRN    |    ' / "      |    = / +     |    \ / |      |    ` / ~      |    INS      |
+    // |    L_SHIFT     |               |               |       none    |    SPACE      |    LALT       |                  |   RSHIFT   |   ENTER       |       FUN_L  |               |               |    RCTRL    |
+    // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        symbol_layer {
-            bindings = <
+    symbol_layer {
+        bindings = <
 &mo 5              &kp LEFT_BRACKET   &kp LS(NUMBER_6)         &kp SINGLE_QUOTE  &none  &none   &none   &none   &none  &none  &none
 &kp C_VOLUME_UP    &kp HASH           &kp PERCENT              &kp SEMI          &none  &none   &none   &none   &none  &none  &none
 &kp C_VOLUME_DOWN  &kp DOUBLE_QUOTES  &kp LS(INTERNATIONAL_1)  &kp MINUS         &none  &none   &none   &none   &none  &none  &none
 &kp C_MUTE         &trans             &trans                   &trans            &none  &trans  &trans  &trans  &none
-            >;
+        >;
 
-            sensor-bindings = <&inc_dec_kp 0 0>;
-        };
+        sensor-bindings = <&rot_kp K_SCROLL_DOWN K_SCROLL_UP>;
+    };
 
-        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |    /           |       ,        |       END     |       {       |       ’      |    ESC        |                  |            |      L      |      R         |    PG_UP      |     {       |      }      |
-        // |    HOME        |       C_SAVE   |       END     |       }       |       U      |    LCTRL      |                  |            |  Backspace  |    HOME        |    PG_DN      |    END      |    DEL      |
-        // |    UNDO        |       CUT      |       COPY    |       PASTE   |       Q      |    TAB        |                  |      F     |    ' / "    |    = / +       |    \ / |      |    ` / ~    |    INS      |
-        // |    L_SHIFT     |                |               |       BT_L    |      SPACE   |    LALT       |                  |   ENTER    |    none     |   R_SHIFT      |               |             |   R_SHIFT   |
-        // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // |    /           |       ,        |       END     |       {       |       ’      |    ESC        |                  |            |      L      |      R         |    PG_UP      |     {       |      }      |
+    // |    HOME        |       C_SAVE   |       END     |       }       |       U      |    LCTRL      |                  |            |  Backspace  |    HOME        |    PG_DN      |    END      |    DEL      |
+    // |    UNDO        |       CUT      |       COPY    |       PASTE   |       Q      |    TAB        |                  |      F     |    ' / "    |    = / +       |    \ / |      |    ` / ~    |    INS      |
+    // |    L_SHIFT     |                |               |       BT_L    |      SPACE   |    LALT       |                  |   ENTER    |    none     |   R_SHIFT      |               |             |   R_SHIFT   |
+    // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        Number_layer {
-            bindings = <
+    Number_layer {
+        bindings = <
 &none  &none   &none   &none   &none   &none   &kp N7        &kp N8        &kp N9                      &kp LS(MINUS)            &kp LS(SEMICOLON)
 &none  &none   &none   &none   &none   &none   &kp NUMBER_4  &kp N5        &kp NUMBER_6                &kp LS(INTERNATIONAL_1)  &kp MINUS
 &none  &none   &none   &none   &none   &none   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3                &kp PERIOD               &kp SLASH
 &none  &trans  &trans  &trans  &kp N0  &trans  &trans        &none         &mt LEFT_ALT DOUBLE_QUOTES
-            >;
-        };
+        >;
 
-        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |        1       |      2        |       3       |       4       |       5       |    ESC        |               |            |      6       |      7        |       8       |       9       |       0       |
-        // |        !       |      @        |       #       |       $       |       %       |    none       |               |            |      ^       |      &        |       *       |       (       |       )       | 
-        // |        F1      |     F2        |     F3        |       F4      |       F5      |    TAB        |               |     F11    |    ' / "     |    = / +      |    \ / |      |    ` / ~      |       INS     |
-        // |    L_SHIFT     |               |               | En / LOWER    |    Space      |    LSIHT      |               |   R_SHIFT  |      ENTER   |     none      |               |               |       R_SHIFT |
-        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+        sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
+    };
 
-        Arrow_layer {
-            bindings = <
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // |        1       |      2        |       3       |       4       |       5       |    ESC        |               |            |      6       |      7        |       8       |       9       |       0       |
+    // |        !       |      @        |       #       |       $       |       %       |    none       |               |            |      ^       |      &        |       *       |       (       |       )       | 
+    // |        F1      |     F2        |     F3        |       F4      |       F5      |    TAB        |               |     F11    |    ' / "     |    = / +      |    \ / |      |    ` / ~      |       INS     |
+    // |    L_SHIFT     |               |               | En / LOWER    |    Space      |    LSIHT      |               |   R_SHIFT  |      ENTER   |     none      |               |               |       R_SHIFT |
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+    Arrow_layer {
+        bindings = <
 &none  &none   &none   &none   &none           &none          &none         &none        &none  &none  &kp HOME
 &none  &none   &none   &none   &none           &none          &kp UP_ARROW  &none        &none  &none  &kp END
 &none  &none   &none   &none   &none           &none          &kp DOWN      &kp RIGHT    &none  &none  &none
 &none  &trans  &trans  &trans  &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
-            >;
+        >;
 
-            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
-        };
+        sensor-bindings = <&rot_kp K_SCROLL_DOWN K_SCROLL_UP>;
+    };
 
-        // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |     F1      |     F2     |     F3     |     F4     |    F5      |    none    |                |            |    F6      |    F7      |    F8      |    F9       |     F10     |
-        // |     F11     |     F12    |     F13    |     F14    |    F15     |    none    |                |   none     |    F16     |    F17     |    F18     |    F19      |     F20     |
-        // |     none    |    none    |    none    |    none    |   none     |    none    |                |   none     |    none    |    none    |    none    |    none     |     none    |
-        // |     L_SHIFT |    none    |    none    |    none    |   none     |    none    |                |   none     |    none    |    none    |    none    |    none     |     R_SHIFT |
-        // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // |     F1      |     F2     |     F3     |     F4     |    F5      |    none    |                |            |    F6      |    F7      |    F8      |    F9       |     F10     |
+    // |     F11     |     F12    |     F13    |     F14    |    F15     |    none    |                |   none     |    F16     |    F17     |    F18     |    F19      |     F20     |
+    // |     none    |    none    |    none    |    none    |   none     |    none    |                |   none     |    none    |    none    |    none    |    none     |     none    |
+    // |     L_SHIFT |    none    |    none    |    none    |   none     |    none    |                |   none     |    none    |    none    |    none    |    none     |     R_SHIFT |
+    // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        Func_layer {
-            bindings = <
+    Func_layer {
+        bindings = <
 &kp F1      &kp F2   &kp F3   &kp F4   &kp F5   &none  &kp F6   &kp F7   &kp F8      &kp F9   &none
 &kp F11     &kp F12  &kp F13  &kp F14  &kp F15  &none  &kp F16  &kp F17  &kp F18     &kp F19  &none
 &none       &none    &none    &none    &none    &none  &none    &none    &none       &none    &none
 &kp LSHIFT  &none    &none    &none    &none    &none  &none    &none    &kp RSHIFT
-            >;
-        };
+        >;
+    };
 
-        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        // |    none    |    none    |    none    |    none    |   none     |    none    |                  |            |    none    |    none    |    none    |   none     |    none    |
-        // |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |  BT_SEL 3  |   none     |    none    |                  |            |    none    |    none    |    none    |   BT_CLR   | BT_CLR_ALL |
-        // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |   BT_PRV   |    none    |   BT_NXT   |    none    |
-        // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |    none    |    none    |   none     |    none    |
-        // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    // |    none    |    none    |    none    |    none    |   none     |    none    |                  |            |    none    |    none    |    none    |   none     |    none    |
+    // |  BT_SEL 0  |  BT_SEL 1  |  BT_SEL 2  |  BT_SEL 3  |   none     |    none    |                  |            |    none    |    none    |    none    |   BT_CLR   | BT_CLR_ALL |
+    // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |   BT_PRV   |    none    |   BT_NXT   |    none    |
+    // |    none    |    none    |    none    |    none    |   none     |    none    |                  |    none    |    none    |    none    |    none    |   none     |    none    |
+    // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        Bt_layer {
-            bindings = <
+    Bt_layer {
+        bindings = <
 &none  &none  &none  &none  &none         &none  &none         &none         &none         &none  &none
 &none  &none  &none  &none  &none         &none  &none         &none         &none         &none  &none
 &none  &none  &none  &none  &none         &none  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none  &none
 &none  &none  &none  &none  &bt BT_SEL 0  &none  &none         &none         &none
-            >;
-        };
+        >;
     };
+};
+
 };
