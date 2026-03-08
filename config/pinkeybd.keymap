@@ -111,6 +111,9 @@ combos {
     };
 };
 
+behaviors {
+};
+
 keymap {
     compatible = "zmk,keymap";
 
@@ -147,7 +150,7 @@ keymap {
 &kp C_MUTE         &trans             &trans                   &trans            &none  &trans  &trans  &trans  &none
         >;
 
-        sensor-bindings = <&rot_kp K_SCROLL_DOWN K_SCROLL_UP>;
+        sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
     };
 
     // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -165,7 +168,7 @@ keymap {
 &none  &trans  &trans  &trans  &kp N0  &trans  &trans        &none         &mt LEFT_ALT DOUBLE_QUOTES
         >;
 
-        sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
+        sensor-bindings = <&rot_kp DOWN UP_ARROW>;
     };
 
     // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -183,7 +186,7 @@ keymap {
 &none  &trans  &trans  &trans  &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
         >;
 
-        sensor-bindings = <&rot_kp K_SCROLL_DOWN K_SCROLL_UP>;
+        sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
     };
 
     // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
