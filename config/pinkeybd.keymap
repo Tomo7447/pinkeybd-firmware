@@ -97,13 +97,13 @@
 
         Left_boot_reset {
             bindings = <&bootloader>;
-            key-positions = <33 27 36>;
+            key-positions = <0 1 2 3>;
             layers = <0>;
         };
 
         Right_boot_reset {
             bindings = <&bootloader>;
-            key-positions = <41 38 37>;
+            key-positions = <10 9 8 7>;
             layers = <0>;
         };
     };
