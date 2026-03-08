@@ -183,7 +183,7 @@
 &none  &trans  &trans  &trans  &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
             >;
 
-            sensor-bindings = <&rot_kp C_AC_ZOOM_IN C_AC_ZOOM_OUT>;
+            sensor-bindings = <&rot_kp PAGE_DOWN PG_UP>;
         };
 
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
