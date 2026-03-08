@@ -96,6 +96,18 @@
             key-positions = <4 15>;
             layers = <0 2 1>;
         };
+
+        Left_boot_reset {
+            bindings = <&bootloader>;
+            key-positions = <33 27 36>;
+            layers = <0>;
+        };
+
+        Right_boot_reset {
+            bindings = <&bootloader>;
+            key-positions = <41 38 37>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -116,7 +128,7 @@
 &mt LEFT_CONTROL K_CALCULATOR  &lt 3 BACKSPACE  &lt 2 SPACE  &kp LEFT_SHIFT  &mt LG(H) LC(SPACE)  &mkp LCLK          &lt 1 ENTER  &mkp RCLK  &mt LEFT_ALT DEL
             >;
 
-            sensor-bindings = <&rot_kp PG_DN PG_UP>;
+            sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
         };
 
         // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -133,6 +145,8 @@
 &kp C_VOLUME_DOWN  &kp DOUBLE_QUOTES  &kp LS(INTERNATIONAL_1)  &kp MINUS         &none  &none   &none   &none   &none  &none  &none
 &kp C_MUTE         &trans             &trans                   &trans            &none  &trans  &trans  &trans  &none
             >;
+
+            sensor-bindings = <&inc_dec_kp 0 0>;
         };
 
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -166,7 +180,7 @@
 &none  &trans  &trans  &trans  &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_DOWN K_SCROLL_UP>;
         };
 
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
