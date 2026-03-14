@@ -7,10 +7,10 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <220>;
+    tapping-term-ms = <230>;
 };
 
-&lt { tapping-term-ms = <220>; };
+&lt { tapping-term-ms = <230>; };
 
 / {
     behaviors {
@@ -107,6 +107,12 @@
             key-positions = <10 9 8 7>;
             layers = <0>;
         };
+
+        middle_mouse_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <40 38>;
+            layers = <0 1>;
+        };
     };
 
     behaviors {
@@ -124,10 +130,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W            &kp E      &kp R  &kp T                        &mt LG(PERIOD) F7  &kp Y      &kp U      &kp I             &kp O                &kp P
-&mt LEFT_ALT A        &kp S            &kp D      &kp F  &kp G                        &none              &kp H      &kp J      &kp K             &kp L                &minus_single
-&mt LEFT_SHIFT Z      &kp X            &kp C      &kp V  &kp B                        &mt LS(LG(S)) F10  &kp N      &kp M      &comma_question   &period_exclamation  &slash_double
-&mt LEFT_CONTROL TAB  &lt 3 BACKSPACE  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK          &kp ENTER  &mkp RCLK  &mt LG(H) DELETE
+&kp Q                 &kp W  &kp E      &kp R  &kp T                        &mt F10 F7                &kp Y      &kp U      &kp I                 &kp O                &kp P
+&mt LEFT_ALT A        &kp S  &kp D      &kp F  &kp G                        &none                     &kp H      &kp J      &kp K                 &kp L                &minus_single
+&mt LEFT_SHIFT Z      &kp X  &kp C      &kp V  &kp B                        &mt LG(PERIOD) BACKSPACE  &kp N      &kp M      &comma_question       &period_exclamation  &slash_double
+&mt LEFT_CONTROL TAB  &mo 3  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &mt LG(LS(S)) DELETE
             >;
 
             sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
@@ -145,10 +151,10 @@
 &none  &kp LEFT_BRACKET  &kp HASH     &kp SINGLE_QUOTE  &none   &none      &kp N7        &kp N8        &kp N9             &kp LS(MINUS)            &kp LS(SEMICOLON)
 &none  &kp LS(NUMBER_6)  &kp PERCENT  &kp SEMI          &none   &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6       &kp LS(INTERNATIONAL_1)  &kp MINUS
 &none  &none             &none        &none             &none   &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp PERIOD               &kp SLASH
-&none  &kp BACKSPACE     &trans       &trans            &kp N0  &mkp LCLK  &kp ENTER     &mkp RCLK     &kp DOUBLE_QUOTES
+&none  &trans            &kp SPACE    &trans            &kp N0  &mkp LCLK  &kp ENTER     &mkp RCLK     &kp DOUBLE_QUOTES
             >;
 
-            sensor-bindings = <&rot_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
         };
 
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -178,10 +184,10 @@
 
         Arrow_layer {
             bindings = <
-&kp C_MUTE       &none   &kp ESCAPE  &none   &none           &none          &none         &none        &none  &none  &kp HOME
-&kp C_VOL_DN     &none   &none       &none   &none           &none          &kp UP_ARROW  &none        &none  &none  &kp END
-&kp C_VOLUME_UP  &none   &none       &none   &none           &none          &kp DOWN      &kp RIGHT    &none  &none  &none
-&none            &trans  &mo 5       &trans  &kp LEFT_ARROW  &kp PAGE_DOWN  &trans        &kp PAGE_UP  &none
+&kp C_MUTE       &none   &kp ESCAPE  &none   &none  &none          &kp HOME  &none           &kp UP_ARROW  &none            &none
+&kp C_VOL_DN     &none   &none       &none   &none  &none          &kp END   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none
+&kp C_VOLUME_UP  &none   &none       &none   &mo 5  &none          &none     &none           &none         &none            &none
+&kp LG(H)        &trans  &kp SPACE   &trans  &none  &kp PAGE_DOWN  &trans    &kp PAGE_UP     &none
             >;
 
             sensor-bindings = <&rot_kp PAGE_DOWN PG_UP>;
