@@ -55,6 +55,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        encoder_msc_down_up: encoder_msc_down_up {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ENCODER_MSC_DOWN_UP";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
+            tap-ms = <20>;
+        };
     };
 
     combos {
@@ -178,7 +187,7 @@
 &none  &trans            &kp SPACE    &trans            &kp N0  &mkp LCLK  &kp ENTER     &mkp RCLK     &kp DOUBLE_QUOTES
             >;
 
-            sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -214,7 +223,7 @@
 &kp LG(H)        &trans  &kp SPACE  &trans  &none  &kp PAGE_DOWN  &trans    &kp PAGE_UP     &none
             >;
 
-            sensor-bindings = <&rot_kp PAGE_DOWN PG_UP>;
+            sensor-bindings = <&encoder_msc_down_up>;
         };
 
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
