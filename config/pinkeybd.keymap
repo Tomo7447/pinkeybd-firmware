@@ -113,6 +113,30 @@
             key-positions = <40 38>;
             layers = <0 1>;
         };
+
+        backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <39 18>;
+            layers = <0 1>;
+        };
+
+        Esc {
+            bindings = <&kp ESC>;
+            key-positions = <2 39>;
+            layers = <0 1>;
+        };
+
+        Tab {
+            bindings = <&kp TAB>;
+            key-positions = <4 39>;
+            layers = <0 1>;
+        };
+
+        Alt {
+            bindings = <&kp LEFT_ALT>;
+            key-positions = <11 39>;
+            layers = <0 1>;
+        };
     };
 
     behaviors {
@@ -130,10 +154,10 @@
 
         default_layer {
             bindings = <
-&kp Q                 &kp W  &kp E      &kp R  &kp T                        &mt F10 F7                &kp Y      &kp U      &kp I                 &kp O                &kp P
-&mt LEFT_ALT A        &kp S  &kp D      &kp F  &kp G                        &none                     &kp H      &kp J      &kp K                 &kp L                &minus_single
-&mt LEFT_SHIFT Z      &kp X  &kp C      &kp V  &kp B                        &mt LG(PERIOD) BACKSPACE  &kp N      &kp M      &comma_question       &period_exclamation  &slash_double
-&mt LEFT_CONTROL TAB  &mo 3  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &mt LG(LS(S)) DELETE
+&kp Q             &kp W  &kp E      &kp R  &kp T                        &mt LS(LG(S)) LG(PERIOD)  &kp Y      &kp U      &kp I            &kp O                &kp P
+&kp A             &kp S  &kp D      &kp F  &kp G                        &none                     &kp H      &kp J      &kp K            &kp L                &minus_single
+&mt LEFT_SHIFT Z  &kp X  &kp C      &kp V  &kp B                        &mt F10 F7                &kp N      &kp M      &comma_question  &period_exclamation  &slash_double
+&kp RCTRL         &mo 3  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &kp DELETE
             >;
 
             sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
@@ -184,10 +208,10 @@
 
         Arrow_layer {
             bindings = <
-&kp C_MUTE       &none   &kp ESCAPE  &none   &none  &none          &kp HOME  &none           &kp UP_ARROW  &none            &none
-&kp C_VOL_DN     &none   &none       &none   &none  &none          &kp END   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none
-&kp C_VOLUME_UP  &none   &none       &none   &mo 5  &none          &none     &none           &none         &none            &none
-&kp LG(H)        &trans  &kp SPACE   &trans  &none  &kp PAGE_DOWN  &trans    &kp PAGE_UP     &none
+&kp C_MUTE       &none   &none      &none   &none  &none          &kp HOME  &none           &kp UP_ARROW  &none            &none
+&kp C_VOL_DN     &none   &none      &none   &none  &none          &kp END   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none
+&kp C_VOLUME_UP  &none   &none      &none   &mo 5  &none          &none     &none           &none         &none            &none
+&kp LG(H)        &trans  &kp SPACE  &trans  &none  &kp PAGE_DOWN  &trans    &kp PAGE_UP     &none
             >;
 
             sensor-bindings = <&rot_kp PAGE_DOWN PG_UP>;
