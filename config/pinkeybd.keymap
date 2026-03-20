@@ -14,6 +14,20 @@
 
 / {
     behaviors {
+    mouse_move: mouse_move {
+        compatible = "zmk,behavior-input-two-axis";
+        #binding-cells = <0>;
+        x-input-code = <INPUT_REL_X>;
+        y-input-code = <INPUT_REL_Y>;
+    };
+
+    mouse_scroll: mouse_scroll {
+        compatible = "zmk,behavior-input-two-axis";
+        #binding-cells = <0>;
+        x-input-code = <INPUT_REL_HWHEEL>;
+        y-input-code = <INPUT_REL_WHEEL>;
+    };
+
         rot_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
