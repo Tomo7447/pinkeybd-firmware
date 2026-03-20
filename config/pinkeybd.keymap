@@ -135,6 +135,11 @@
         Shift {
             bindings = <&kp LEFT_SHIFT>;
             key-positions = <35 39>;
+        };
+
+        Left_click {
+            bindings = <&mkp LCLK>;
+            key-positions = <6 7>;
             layers = <0>;
         };
     };
@@ -154,10 +159,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W  &kp E      &kp R  &kp T                        &mt LS(LG(S)) LG(PERIOD)  &kp Y      &kp U      &kp I                &kp O                &kp P
-&kp A             &kp S  &kp D      &kp F  &kp G                        &none                     &kp H      &kp J      &kp K                &kp L                &minus_single
-&mt LEFT_SHIFT Z  &kp X  &kp C      &kp V  &kp B                        &mt F10 F7                &kp N      &kp M      &comma_question      &period_exclamation  &slash_double
-&mt RCTRL TAB     &mo 3  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &mt LEFT_ALT DELETE
+&kp Q      &kp W  &kp E                 &kp R  &kp T                        &mt LS(LG(S)) LG(PERIOD)  &kp Y      &kp U      &kp I            &kp O                &kp P
+&kp A      &kp S  &kp D                 &kp F  &kp G                        &none                     &kp H      &kp J      &kp K            &kp L                &minus_single
+&kp Z      &kp X  &kp C                 &kp V  &kp B                        &mt F10 F7                &kp N      &kp M      &comma_question  &period_exclamation  &slash_double
+&kp RCTRL  &mo 3  &mt LEFT_SHIFT SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
@@ -208,10 +213,10 @@
 
         Arrow_layer {
             bindings = <
-&kp C_MUTE       &none   &kp ESCAPE  &none      &none  &none          &kp HOME  &none           &kp UP_ARROW  &none            &none
-&kp C_VOL_DN     &none   &none       &none      &none  &none          &kp END   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none
-&kp C_VOLUME_UP  &none   &none       &kp LG(V)  &mo 5  &none          &none     &none           &none         &none            &none
-&kp LG(H)        &trans  &kp SPACE   &trans     &none  &kp PAGE_DOWN  &trans    &kp PAGE_UP     &none
+&kp C_MUTE       &none   &kp ESCAPE  &none      &kp TAB  &none          &kp HOME  &none           &kp UP_ARROW  &none            &none
+&kp C_VOL_DN     &none   &kp DEL     &none      &none    &none          &kp END   &kp LEFT_ARROW  &kp DOWN      &kp RIGHT_ARROW  &none
+&kp C_VOLUME_UP  &none   &none       &kp LG(V)  &mo 5    &none          &none     &none           &none         &none            &none
+&kp LG(H)        &trans  &kp SPACE   &trans     &none    &kp PAGE_DOWN  &trans    &kp PAGE_UP     &none
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
