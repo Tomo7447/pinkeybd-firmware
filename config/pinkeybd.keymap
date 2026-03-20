@@ -10,7 +10,10 @@
     tapping-term-ms = <230>;
 };
 
-&lt { tapping-term-ms = <230>; };
+&lt {
+    tapping-term-ms = <230>;
+    flavor = "balanced";
+};
 
 / {
     behaviors {
@@ -151,10 +154,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W  &kp E      &kp R  &kp T                        &mt LS(LG(S)) LG(PERIOD)  &kp Y      &kp U      &kp I            &kp O                &kp P
-&kp A             &kp S  &kp D      &kp F  &kp G                        &none                     &kp H      &kp J      &kp K            &kp L                &minus_single
-&mt LEFT_SHIFT Z  &kp X  &kp C      &kp V  &kp B                        &mt F10 F7                &kp N      &kp M      &comma_question  &period_exclamation  &slash_double
-&mt RCTRL TAB     &mo 3  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &kp DELETE
+&kp Q             &kp W  &kp E      &kp R  &kp T                        &mt LS(LG(S)) LG(PERIOD)  &kp Y      &kp U      &kp I                &kp O                &kp P
+&kp A             &kp S  &kp D      &kp F  &kp G                        &none                     &kp H      &kp J      &kp K                &kp L                &minus_single
+&mt LEFT_SHIFT Z  &kp X  &kp C      &kp V  &kp B                        &mt F10 F7                &kp N      &kp M      &comma_question      &period_exclamation  &slash_double
+&mt RCTRL TAB     &mo 3  &kp SPACE  &mo 1  &mt INT_MUHENKAN INT_HENKAN  &mkp LCLK                 &kp ENTER  &mkp RCLK  &mt LEFT_ALT DELETE
             >;
 
             sensor-bindings = <&rot_kp DOWN_ARROW UP_ARROW>;
