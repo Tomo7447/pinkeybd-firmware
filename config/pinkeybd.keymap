@@ -64,14 +64,6 @@
 
             tap-ms = <40>;
         };
-
-　　　　　zip_scroll_scaler: zip_scroll_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_REL_MSC>; 
-            codes = <INPUT_REL_X INPUT_REL_Y>; 
-            track-remainders;
-        };
     };
 
     combos {
@@ -220,7 +212,6 @@
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
-　　　　　　 input-processors = <&zip_scroll_scaler 2 1>;
         };
 
         // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
