@@ -202,12 +202,12 @@
         // |    L_SHIFT     |                |               |       BT_L    |      SPACE   |    LALT       |                  |   ENTER    |    none     |   R_SHIFT      |               |             |   R_SHIFT   |
         // -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        mouse {
+        not_in_use {
             bindings = <
-&none  &none   &none   &none   &none     &none  &none     &none  &none  &none  &none
-&none  &none   &none   &none   &none     &none  &none     &none  &none  &none  &none
-&none  &none   &none   &none   &none     &none  &mkp MB2  &none  &none  &none  &none
-&none  &trans  &trans  &trans  &mkp MB1  &none  &none     &none  &none
+&none  &none   &none   &none   &none  &none  &none  &none  &none  &none  &none
+&none  &none   &none   &none   &none  &none  &none  &none  &none  &none  &none
+&none  &none   &none   &none   &none  &none  &none  &none  &none  &none  &none
+&none  &trans  &trans  &trans  &none  &none  &none  &none  &none
             >;
 
             sensor-bindings = <&rot_kp DOWN UP_ARROW>;
@@ -256,10 +256,10 @@
 
         Bt_layer {
             bindings = <
-&none  &none  &none  &none  &none         &none      &none         &none         &none  &none  &none
-&none  &none  &none  &none  &none         &none      &none         &none         &none  &none  &none
-&none  &none  &none  &none  &none         &none      &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none
-&none  &none  &none  &none  &bt BT_SEL 0  &mkp LCLK  &kp P         &mkp RCLK     &none
+&none  &none  &none  &none  &none         &none  &none         &none         &none  &none  &none
+&none  &none  &none  &none  &none         &none  &none         &none         &none  &none  &none
+&none  &none  &none  &none  &none         &none  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none
+&none  &none  &none  &none  &bt BT_SEL 0  &none  &none         &none         &none
             >;
         };
     };
