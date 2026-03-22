@@ -132,7 +132,7 @@
         middle_mouse_click {
             bindings = <&mkp MCLK>;
             key-positions = <40 38>;
-            layers = <0 1>;
+            layers = <0 1 5>;
         };
 
         backspace {
@@ -256,10 +256,10 @@
 
         Bt_layer {
             bindings = <
-&none  &none  &none  &none  &none         &none  &none         &none         &none  &none  &none
-&none  &none  &none  &none  &none         &none  &none         &none         &none  &none  &none
-&none  &none  &none  &none  &none         &none  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none
-&none  &none  &none  &none  &bt BT_SEL 0  &none  &none         &none         &none
+&none  &none  &none  &none  &none         &none      &none         &none         &none  &none  &none
+&none  &none  &none  &none  &none         &none      &none         &none         &none  &none  &none
+&none  &none  &none  &none  &none         &none      &bt BT_SEL 1  &bt BT_SEL 2  &none  &none  &none
+&none  &none  &none  &none  &bt BT_SEL 0  &mkp LCLK  &kp P         &mkp RCLK     &none
             >;
         };
     };
