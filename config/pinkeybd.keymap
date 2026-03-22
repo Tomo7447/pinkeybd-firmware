@@ -137,6 +137,12 @@
             key-positions = <14 12>;
             layers = <0 1>;
         };
+
+        Temporary_Middle_mouse_click {
+            bindings = <&mkp MCLK>;
+            key-positions = <39 40>;
+            layers = <0 1>;
+        };
     };
 
     behaviors {
