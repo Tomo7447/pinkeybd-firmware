@@ -148,6 +148,15 @@
     behaviors {
     };
 
+    macros {
+        Santen: Santen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp HASH &kp T &kp SPACE>;
+            label = "SANTEN";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -178,10 +187,10 @@
 
         symbol_and_number_layer {
             bindings = <
-&none  &kp LEFT_BRACKET  &kp HASH     &kp SINGLE_QUOTE  &none   &none      &kp N7        &kp N8        &kp N9             &kp LS(MINUS)            &kp LS(SEMICOLON)
-&none  &kp LS(NUMBER_6)  &kp PERCENT  &kp SEMI          &none   &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6       &kp LS(INTERNATIONAL_1)  &kp MINUS
-&none  &none             &none        &none             &none   &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp PERIOD               &kp SLASH
-&none  &trans            &kp SPACE    &trans            &kp N0  &mkp LCLK  &kp ENTER     &mkp RCLK     &kp DOUBLE_QUOTES
+&none  &kp LEFT_BRACKET  &kp LS(NUMBER_6)  &kp SINGLE_QUOTE  &Santen                  &none      &kp N7        &kp N8        &kp N9             &kp N0         &kp LS(SEMICOLON)
+&none  &kp HASH          &kp PERCENT       &kp SEMI          &kp LS(INTERNATIONAL_1)  &none      &kp NUMBER_4  &kp N5        &kp NUMBER_6       &kp LS(MINUS)  &kp MINUS
+&none  &none             &none             &none             &none                    &none      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3       &kp PERIOD     &kp SLASH
+&none  &trans            &kp SPACE         &trans            &none                    &mkp LCLK  &kp ENTER     &mkp RCLK     &kp DOUBLE_QUOTES
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
