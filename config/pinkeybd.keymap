@@ -152,7 +152,7 @@
         Santen: Santen {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp HASH &kp T>;
+            bindings = <&kp QUESTION &kp T &kp INT_HENKAN>;
             label = "SANTEN";
         };
     };
