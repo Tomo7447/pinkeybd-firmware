@@ -126,14 +126,14 @@
             layers = <0 1 5>;
         };
 
-        backspace {
-            bindings = <&kp BACKSPACE>;
+        Enter {
+            bindings = <&kp ENTER>;
             key-positions = <18 20>;
             layers = <0 1>;
         };
 
-        Enter {
-            bindings = <&kp ENTER>;
+        Backspace {
+            bindings = <&kp BACKSPACE>;
             key-positions = <14 12>;
             layers = <0 1>;
         };
